@@ -1,0 +1,46 @@
+[
+        {"id": 1,
+        "name": "Pratibha",
+        "emailAddress": [{"work": "pratibha.s@gmail.com"},
+        {"personal": "pratibha.s@abcd.com"
+            }],
+        "contactNo": [
+            {"work": "8507985267"},
+            {"personal": "9987209817"}]},
+            
+        {"id": 2,
+        "name": "Prasad",
+        "emailAddress": [{"work": "prasad.s@gmail.com"},
+        {"personal": "prasad.s@abcd.com"
+            }],
+        "contactNo": [{"work": "8507989999"},
+        {"personal": "4519028730"}]
+        },
+        
+        {"id": 3,
+        "name": "Sujata",
+        "emailAddress": [{"work": "sujata.s@gmail.com"},
+        {"personal": "sujata.s@abcd.com"
+            }],
+        "contactNo": [{"work": "8501119999"},
+        {"personal": "9019028730"}]
+        },
+        
+        {"id": 3,
+        "name": "Ashish",
+        "emailAddress": [{"work": "ashish.p@gmail.com"},
+        {"personal": "ashish.p@abcd.com"
+            }],
+        "contactNo": [{"work": "8501119911"},
+        {"personal": "9019028730"}]
+        },
+        
+        {"id": 4,
+        "name": "Ravi",
+        "emailAddress": [{"work": "ravi.n@gmail.com"},
+        {"personal": "ravi.n@abcd.com"
+            }],
+        "contactNo": [{"work": "8501119900"},
+        {"personal": "9019028711"}]
+        }
+                        ]

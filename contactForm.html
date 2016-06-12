@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="pageApp" ng-controller="pageController">
+<head>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/pageAppCss.css"></link>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>	
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/pageAppController.js"></script>
+</head>
+
+<body>
+
+	<div id="header">
+		<h3>Logo</h3>
+	</div>
+	<ul class="vertical">
+		<li><a href="#home">Dashboard</a></li>
+		<li><a class="active" href="#news">Contacts</a></li>
+	</ul>
+
+	<div class="headingLine">
+		<h3>Contact Form</h3>
+		<hr style="margin-right: 5%">
+		<div>
+			<div class="btnClass">
+				<a class="btn btn-primary" href="contactForm.html">
+					Add Contact
+				</a>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+
+		<div class="container">
+			<div class="jumbotron">
+				<form name="addEditContact" method="get">
+					First Name: <input type="text" name="fname" ng-model="fname"
+						placeholder="Enter the First Name"><br>
+					<br> Last Name: <input type="text" name="lname"
+						ng-model="lname" placeholder="Enter the Last Name"><br>
+					<br> Email
+					<div class="fa fa-plus-square-o" aria-hidden="false">
+						<select>
+							<option>Work</option>
+							<option>Personal</option>
+						</select> <input type="email" name="emailWork" ng-model="emailWork"><br>
+						<br> Phone No
+						<div class="fa fa-plus-square-o" aria-hidden="false">
+							<select>
+								<option>Work</option>
+								<option>Personal</option>
+							</select> <input type="text" name="phWork" ng-model="phWork"><br>
+							<br>
+						</div>
+					</div>
+					
+					<br><br>
+					<div class="saveBtnClass">
+						<button type="button" class="btn" ng-click="addContacts()">Save</button>
+					</div>
+					<div class="cancelBtnClass">
+						<button type="button" class="btn" ng-click="">Cancel</button>
+					</div>
+			</div>
+</body>
+</html>
+

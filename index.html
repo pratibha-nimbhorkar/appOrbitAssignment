@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="pageApp">
+<head>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/pageAppCss.css"></link>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/pageAppController.js"></script>
+
+</head>
+<body ng-controller="pageController">
+
+	<div id="header">
+		<h3>Logo</h3>
+	</div>
+
+	<ul class="vertical">
+		<li><a href="#home">Dashboard</a></li>
+		<li><a class="active" href="#contact">Contacts</a></li>
+	</ul>
+
+	<div class="right">
+		<h3>Contact List</h3>
+		<hr>
+		<div>
+			Quick Find Contacts : <input type="text" name="findContact"
+				ng-model="findContact" placeholder="Type Here">
+			<div class="addContactBtn">
+				<a class="btn btn-primary" href="contactForm.html">
+					Add Contact
+				</a>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div id="content">
+			<table class="table table-bordered">
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>Email Address</th>
+					<th>Contact No</th>
+				</tr>
+				<tr ng-repeat="contact in contactDetails | filter:findContact">
+					<td>{{contact.id}}</td>
+					<td>{{contact.name}}</td>
+
+					<td><table>
+							<tr ng-repeat="email in contact.emailAddress">
+								<td>{{email.work}}</td>
+							</tr>
+							<tr ng-repeat="email in contact.emailAddress">
+								<td>{{email.personal}}</td>
+							</tr>
+						</table></td>
+
+						<td><table>
+							<tr ng-repeat="contactno in contact.contactNo">
+								<td>{{contactno.work}}</td>
+							</tr>
+							<tr ng-repeat="contactno in contact.contactNo">
+								<td>{{contactno.personal}}</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+				
+		<nav id="page-selection">
+			<ul class="pager">
+				<li><a href="#">Prev</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">Next</a></li>
+			</ul>
+		</nav>
+</body>
+</html>
+
